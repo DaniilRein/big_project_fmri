@@ -1,0 +1,59 @@
+# Neuroimaging data files
+*.nii
+*.nii.gz
+*.dcm
+*.IMA
+*.json
+
+# Subject directories structure
+# Ignore all files in subject directories
+sub-*/anat/*
+sub-*/func/*
+# But keep the directory structure
+!sub-*/anat/.gitkeep
+!sub-*/func/.gitkeep
+
+# Derivatives and preprocessed data
+derivatives/*
+!derivatives/.gitkeep
+
+# Large auxiliary files
+*.mat
+*.h5
+*.hdf5
+
+# System and hidden files
+.DS_Store
+._.DS_Store
+._*
+*~
+
+# Python cache and virtual environment
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+env/
+.env/
+.venv/
+
+# IDE specific files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Log files
+*.log
+*.out
+
+# Results and figures (if you want to keep them out of version control)
+results/*
+!results/.gitkeep
+figures/*
+!figures/.gitkeep
+
+# Keep specific files that should be versioned
+!environment.yml
+!requirements.txt
+!README.md
